@@ -3,8 +3,8 @@
 **分享下在Github上收集的优秀项目和其搭建过程**
 
 - ChatGPT Telegram Bot
-- 2.反代网站
-- 3.伪终端
+- 反代网站
+- 伪终端
 
 ## 1.Telegram机器人
 
