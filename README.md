@@ -1,18 +1,16 @@
 # 						ChatGPT合集
 
-> 1.ChatGPT Telegram Bot
->
-> 2.反代网站
->
-> 3.伪终端
->
-> ​	由于Openai的不断更新接口拦截，现在实现chatgpt对接要麻烦了很多，在此分享下在Github上收集的优秀项目，和搭建过程-
+由于Openai的接口不断更新拦截，现在实现chatgpt对接要麻烦了很多，在此分享下在Github上收集的优秀项目和其搭建过程
+
+- 1.ChatGPT Telegram Bot
+- 2.反代网站
+- 3.伪终端
 
 ## 1.Telegram机器人
 
 [**ChatGPT Telegram Bot**](https://github.com/RainEggplant/chatgpt-telegram-bot)：一个基于 Node.js 的 Telegram ChatGPT 机器人，支持无浏览器和基于浏览器的 API。
 
-#####  目前关于ChatGPT的API调用有以下几种方式:![image-20230223164925186](https://github.com/HHhne/ChatGPT-/blob/main/images/1.png)
+#####  目前关于ChatGPT的API调用有以下几种方式:![image-20230223164925186](1.png)
 
 > - 官方的。使用text-davinci-003，通过OpenAI官方的完成度API来模仿ChatGPT（最强大的方法，但它不是免费的，也没有使用为聊天而微调的模型）。
 > - 非官方的。使用非官方代理服务器，以规避Cloudflare的方式访问ChatGPT的后端API（使用真正的ChatGPT，而且相当轻量级，但依赖于第三方服务器，而且有速率限制）
@@ -53,7 +51,7 @@ pnpm build && pnpm start  #关于该机器人的更多细节参考原作者介�
 
 搭建成功如下，[♡Chat-GPT](https://t.me/mmmin_bot)
 
-![image-20230223174116372](https://github.com/HHhne/ChatGPT-/blob/main/images/image-20230223174116372.png)
+![image-20230223174116372](image-20230223174116372.png)
 
 ## 2.反代网站
 
@@ -112,7 +110,7 @@ pnpm start
 测试没有问题，开启tmux窗口
 
 ```bash
-chmod +x https://github.com/HHhne/ChatGPT-/blob/main/images/start.sh && https://github.com/HHhne/ChatGPT-/blob/main/images/start.sh #最后退出tmux窗口即可 
+chmod +x start.sh && start.sh #最后退出tmux窗口即可 
 ```
 
 最后附上Nginx反代配置代码
@@ -141,7 +139,7 @@ server {
 
 部署成功如图,[Chatgpt-web](http://chat.hhhnee.top)
 
-![image-20230223184552349](https://github.com/HHhne/ChatGPT-/blob/main/images/image-20230223184552349.png)
+![image-20230223184552349](image-20230223184552349.png)
 
 ## 3.伪终端
 
@@ -185,7 +183,7 @@ server {
 
 更多请参考原作者，同样附上成品展示：
 
-![image-20230223185809074](https://github.com/HHhne/ChatGPT-/blob/main/images/image-20230223185809074.png)
+![image-20230223185809074](image-20230223185809074.png)
 
 三个项目都使用了Access Token
 
