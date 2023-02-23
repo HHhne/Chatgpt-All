@@ -1,5 +1,5 @@
 ---
-typora-root-url: ./ChatGPT合集
+typora-root-url: /images/ChatGPT合集
 
 ---
 
@@ -17,11 +17,8 @@ typora-root-url: ./ChatGPT合集
 
 [**ChatGPT Telegram Bot**](https://github.com/RainEggplant/chatgpt-telegram-bot)：一个基于 Node.js 的 Telegram ChatGPT 机器人，支持无浏览器和基于浏览器的 API。
 
+#####  目前关于ChatGPT的API调用有以下几种方式:![image-20230223164925186](1.png)
 
-
-> 
->     介绍:![image-20230223164925186](1.png)
->
 > - 官方的。使用text-davinci-003，通过OpenAI官方的完成度API来模仿ChatGPT（最强大的方法，但它不是免费的，也没有使用为聊天而微调的模型）。
 > - 非官方的。使用非官方代理服务器，以规避Cloudflare的方式访问ChatGPT的后端API（使用真正的ChatGPT，而且相当轻量级，但依赖于第三方服务器，而且有速率限制）
 > - 浏览器（不推荐）。使用Puppeteer访问ChatGPT的官方网络应用（使用真正的ChatGPT，但非常不稳定，重量级，容易出错）。
@@ -47,9 +44,9 @@ pnpm install
 pnpm build && pnpm start  #关于该机器人的更多细节参考原作者介绍
 ```
 
-既然能够白嫖，当然选择第三种非官方API，详情参考文档-->[chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api#access-token)
+这里选择第三种非官方API，详情参考文档-->[chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api#access-token)
 
-这里简单介绍两种获取Access Token的方法:
+这里介绍两种获取Access Token的方法:
 
 1.使用 [acheong08/OpenAIAuth](https://github.com/acheong08/OpenAIAuth)，这是一个python脚本，可以自动登录并获得访问令牌。这适用于电子邮件+密码账户（例如，它不支持通过微软/谷歌授权的账户）。
 
@@ -61,7 +58,7 @@ pnpm build && pnpm start  #关于该机器人的更多细节参考原作者介�
 
 搭建成功如下，[♡Chat-GPT](https://t.me/mmmin_bot)
 
-![image-20230223174116372](./image-20230223174116372.png)
+![image-20230223174116372](/images/image-20230223174116372.png)
 
 ## 2.反代网站
 
@@ -94,8 +91,6 @@ pnpm build && pnpm start  #关于该机器人的更多细节参考原作者介�
 > 2. 使用 `OpenAI API Key` 请填写 `OPENAI_API_KEY` 字段 [(获取 apiKey)](https://platform.openai.com/overview)
 > 3. 使用 `Web API` 请填写 `OPENAI_ACCESS_TOKEN` 字段 [(获取 accessToken)](https://chat.openai.com/api/auth/session)
 > 4. 同时存在时以 `OpenAI API Key` 优先
-
-配置过程请自行查看官方说明，不再赘述
 
 由于站点部署是前后端分离的，所以对于前端和后端需要分别进行安装依赖和开启服务
 
@@ -151,7 +146,7 @@ server {
 
 部署成功如图,[Chatgpt-web](http://chat.hhhnee.top)
 
-![image-20230223184552349](./image-20230223184552349.png)
+![image-20230223184552349](/images/image-20230223184552349.png)
 
 ## 3.伪终端
 
@@ -193,16 +188,18 @@ server {
 >
 > - 简单而粗暴，不失优雅。
 
-更多请参考原作者
+更多请参考原作者，同样附上成品展示：
 
-该项目同样使用了Access Token
+![image-20230223185809074](/images/image-20230223185809074.png)
 
-## 关于 Access Token
+三个项目都使用了Access Token
+
+# 关于 Access Token
 
 - 使用`Access Token`方式登录，可以无代理直连。
 - 通常使用`Google`或`Microsoft`账号登录`ChatGPT`的人会用到
 - 首先正常登录`ChatGPT`，不管是账号密码，还是`Google`或是`Microsoft`。
 - 登录成功到聊天页面后打开：`https://chat.openai.com/api/auth/session`。
 - 其中`accessToken`字段的那一长串内容即是`Access Token`。
-- `Access Token`可以复制保存，其有效期目前为`1个月`。
+- `Access Token`可以复制保存，其有效期目前为`8小时`。
 - 不要泄露你的`Access Token`，使用它可以操纵你的账号。
