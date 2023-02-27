@@ -110,7 +110,7 @@ pnpm start
 测试没有问题，开启tmux窗口
 
 ```bash
-chmod +x https://github.com/HHhne/ChatGPT-/blob/main/images/start.sh && https://github.com/HHhne/ChatGPT-/blob/main/images/start.sh #最后退出tmux窗口即可 
+chmod +x start.sh && start.sh #最后退出tmux窗口即可 
 ```
 
 最后附上Nginx反代配置代码
@@ -120,7 +120,7 @@ server {
     listen       80;
     server_name 你的域名;
       location / {
-        proxy_pass http://127.0.0.1:1002;#需要被方向代理的地址
+        proxy_pass http://127.0.0.1:1002;#需要被反向代理的地址
         proxy_set_header Host $host:$server_port;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
