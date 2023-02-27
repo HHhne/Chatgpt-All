@@ -327,6 +327,6 @@ class Authenticator:
             )
 if __name__ == '__main__':
     # Replace YOUR_EMAIL and YOUR_PASSWORD with your OpenAI email and password
-    authenticator = Authenticator(email_address="szyopop12@hotmail.com", password="897091059")
+    authenticator = Authenticator(email_address="你的邮箱", password="密码")
     authenticator.begin()
     print(f"\n\nEnd")
