@@ -49,8 +49,7 @@ pnpm build && pnpm start  #关于该机器人的更多细节参考原作者介�
 
 > Access tokens 持续时间约为8小时
 
-搭建成功如下，[♡Chat-GPT](https://t.me/mmmin_bot)
-
+搭建成功如下，[♡Chat-GPT](https://t.me/mmmin_bot
 ![image-20230223174116372](https://github.com/HHhne/ChatGPT-/blob/main/images/image-20230223174116372.png)
 
 ## 2.反代网站
@@ -196,3 +195,4 @@ server {
 - 其中`accessToken`字段的那一长串内容即是`Access Token`。
 - `Access Token`可以复制保存，其有效期目前为`8小时`。
 - 不要泄露你的`Access Token`，使用它可以操纵你的账号。
+![image-20230223174116372](https://github.com/HHhne/ChatGPT-/blob/main/images/Honeyview_Honeyview_images.jpg)
